@@ -1,0 +1,48 @@
+version: '3'
+services:
+
+  mi-scale:
+    container_name: mi-scale
+    image: lolouk44/xiaomi-mi-scale:latest
+    volumes:
+      - /home/pi/xiaomi_mi_scale:/data
+    privileged: true
+    network_mode: host
+    environment:
+      - TZ=${TZ}
+    restart: always
+
+  switchbot-mqtt:
+    container_name: switchbot-mqtt
+    image: fphammerle/switchbot-mqtt:2.1.0-armv7
+    network_mode: host
+    userns_mode: host
+    cap_add:
+      - NET_ADMIN
+    cap_drop:
+      - ALL
+    user: '0'
+    environment:
+      - TZ=${TZ}
+      - MQTT_HOST=${MQTT_HOST}
+      - MQTT_PORT=${MQTT_PORT}
+      - FETCH_DEVICE_INFO=yes
+    restart: always
+
+    # PermissionError: [Errno 1] Operation not permitted
+    # https://packages.debian.org/sid/libseccomp2
+    # wget http://ftp.us.debian.org/debian/pool/main/libs/libseccomp/libseccomp2_2.5.2-2_armhf.deb
+    # sudo dpkg -i libseccomp2_2.5.2-2_armhf.deb
+
+  docker-playactor:
+    container_name: playactor
+    build:
+      context: .
+      dockerfile: playactor/Dockerfile
+    volumes:
+      - /home/pi/playactor:/root/.config/playactor
+    network_mode: host
+    environment:
+      - TZ=${TZ}
+    command: tail -f /dev/null
+    restart: always
