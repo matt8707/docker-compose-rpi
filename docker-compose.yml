@@ -23,7 +23,6 @@ services:
       - ALL
     user: '0'
     environment:
-      - TZ=${TZ}
       - MQTT_HOST=${MQTT_HOST}
       - MQTT_PORT=${MQTT_PORT}
       - FETCH_DEVICE_INFO=yes
@@ -34,7 +33,7 @@ services:
     # wget http://ftp.us.debian.org/debian/pool/main/libs/libseccomp/libseccomp2_2.5.2-2_armhf.deb
     # sudo dpkg -i libseccomp2_2.5.2-2_armhf.deb
 
-  docker-playactor:
+  playactor:
     container_name: playactor
     build:
       context: .
