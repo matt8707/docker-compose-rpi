@@ -1,6 +1,6 @@
 # docker-compose-rpi
 
-Strategically placed Raspberry Pi 3 Model B+ for and bluetooth and Playstation 5 communication
+Strategically placed Raspberry Pi 3 Model B+ for Bluetooth and Playstation 5 communication
 
 * [lolouk44/xiaomi_mi_scale](https://github.com/lolouk44/xiaomi_mi_scale)
 * [fphammerle/switchbot-mqtt](https://github.com/fphammerle/switchbot-mqtt)
