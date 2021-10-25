@@ -1,6 +1,6 @@
 # docker-compose-rpi
 
-Strategically placed Raspberry Pi 3 Model B+ for Bluetooth and Playstation 5 communication
+Strategically placed Raspberry Pi 3 Model B+ for Bluetooth communication (and Playstation 5)
 
 * [lolouk44/xiaomi_mi_scale](https://github.com/lolouk44/xiaomi_mi_scale)
 * [fphammerle/switchbot-mqtt](https://github.com/fphammerle/switchbot-mqtt)
@@ -9,20 +9,19 @@ Strategically placed Raspberry Pi 3 Model B+ for Bluetooth and Playstation 5 com
 ---
 
 #### Setup Raspberry Pi OS Lite (32-bit)
-https://www.raspberrypi.com/software/
-https://en.wikipedia.org/wiki/Raspberry_Pi_OS#Release_history
+https://www.raspberrypi.com/software/<br>https://en.wikipedia.org/wiki/Raspberry_Pi_OS#Release_history
 
 **[Advanced options](https://www.raspberrypi.com/documentation/computers/getting-started.html#advanced-options)** `Ctrl` + `Shift` + `X`
 
 * **Enable SSH**
-  * `Allow public-key authentication only`
+  * Allow public-key authentication only
 * **Configure wifi (2,4 GHz)**
-  * `SSID:` `*******`
-  * `Password:` `*************`
-  * `Wifi country:` `SE`
+  * SSID: *******
+  * Password: *************
+  * Wifi country: SE
 * **Set locale settings**
-  * `Time zone:` `Europe/Stockholm`
-  * `Keyboard layout:` `se`
+  * Time zone: Europe/Stockholm
+  * Keyboard layout: se
 
 #### Docker
 
