@@ -54,7 +54,6 @@ sudo apt install samba -y
 sudo smbpasswd -a pi
 sudo truncate -s 0 /etc/samba/smb.conf
 sudo nano /etc/samba/smb.conf
-sudo /etc/init.d/smbd restart
 ```
 
 **smb.conf**
@@ -86,5 +85,9 @@ directory mask = 0775
 ```
 
 `CTRL+O`, `Enter`, `CTRL+X`
+
+```bash
+sudo /etc/init.d/smbd restart
+```
 
 </details>

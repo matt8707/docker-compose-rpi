@@ -3,7 +3,7 @@ services:
 
   mi-scale:
     container_name: mi-scale
-    image: lolouk44/xiaomi-mi-scale:latest
+    image: lolouk44/xiaomi-mi-scale
     volumes:
       - /home/pi/xiaomi_mi_scale:/data
     privileged: true
@@ -14,7 +14,7 @@ services:
 
   switchbot-mqtt:
     container_name: switchbot-mqtt
-    image: fphammerle/switchbot-mqtt:2.1.0-armv7
+    image: fphammerle/switchbot-mqtt:2.2.0-armv7
     network_mode: host
     userns_mode: host
     cap_add:
