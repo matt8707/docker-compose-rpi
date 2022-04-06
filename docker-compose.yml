@@ -14,7 +14,7 @@ services:
 
   switchbot-mqtt:
     container_name: switchbot-mqtt
-    image: fphammerle/switchbot-mqtt:3.0.0-armv7
+    image: fphammerle/switchbot-mqtt:3.1.0-armv7
     network_mode: host
     userns_mode: host
     cap_add:
