@@ -32,16 +32,3 @@ services:
     # https://packages.debian.org/sid/libseccomp2
     # wget http://ftp.us.debian.org/debian/pool/main/libs/libseccomp/libseccomp2_2.5.2-2_armhf.deb
     # sudo dpkg -i libseccomp2_2.5.2-2_armhf.deb
-
-  playactor:
-    container_name: playactor
-    build:
-      context: .
-      dockerfile: playactor/Dockerfile
-    volumes:
-      - /home/pi/playactor:/root/.config/playactor
-    network_mode: host
-    environment:
-      - TZ=${TZ}
-    command: tail -f /dev/null
-    restart: always

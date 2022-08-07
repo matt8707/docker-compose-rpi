@@ -1,12 +1,14 @@
 # docker-compose-rpi
 
-Strategically placed Raspberry Pi 3 Model B+ for Bluetooth communication (and Playstation 5)
+Strategically placed Raspberry Pi 3 Model B+ for Bluetooth communication
 
 * [lolouk44/xiaomi_mi_scale](https://github.com/lolouk44/xiaomi_mi_scale)
 * [fphammerle/switchbot-mqtt](https://github.com/fphammerle/switchbot-mqtt)
-* [dhleong/playactor](https://github.com/dhleong/playactor)
 
 ---
+
+<details>
+<summary>Notes</summary>
 
 #### Setup Raspberry Pi OS Lite (32-bit)
 https://www.raspberrypi.com/software/<br>https://en.wikipedia.org/wiki/Raspberry_Pi_OS#Release_history
@@ -33,9 +35,6 @@ sudo apt install docker-compose -y
 sudo gpasswd -a $USER docker
 sudo reboot
 ```
-
-<details>
-<summary>Other services</summary>
 
 #### Rclone
 
